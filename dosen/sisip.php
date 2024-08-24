@@ -1,17 +1,17 @@
 <?php
-    echo "'proses':'SISIP',";
+    echo "'proses':'SISIP DOSEN',";
     $parameter = "";
-    if(isset($od["nim"]) and $od["nim"]!="") {
-        $nim = $od["nim"];
+    if(isset($od["id_dosen"]) and $od["id_dosen"]!="") {
+        $id_dosen = $od["id_dosen"];
         $nama = $od["nama"];
         $tanggal_lahir = $od["tanggal_lahir"];
         $tempat_lahir = $od["tempat_lahir"];
         $jenis_kelamin =  $od["jenis_kelamin"];
         $masuk = $od["masuk"];
         $keluar = $od["keluar"];
-        $parameter = "'" . $nim . "', '" . $nama . "', '" . $tempat_lahir . "', '" . $tanggal_lahir . "', '" . $jenis_kelamin . "', '" . $masuk . "', '" . $keluar . "'";
+        $parameter = "'" . $id_dosen . "', '" . $nama . "', '" . $tempat_lahir . "', '" . $tanggal_lahir . "', '" . $jenis_kelamin . "', '" . $masuk . "', '" . $keluar . "'";
     }
-    $sql = "call insertMHS(" . $parameter . ");";
+    $sql = "call insertDOSEN(" . $parameter . ");";
     
     include_once("conn.php");
     
