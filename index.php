@@ -6,23 +6,35 @@
 
         $data = json_decode(file_get_contents('php://input'), true);
         //var_dump($data);
-        $perintah = $data["data"]["perintah"];
+        //$perintah = $data["data"]["perintah"];
         //echo $perintah;
         if(isset($data["data"])) {
             $od = $data["data"]; //Object Data
             //echo $data["kunci"]; //Bisa dilakukan pemeriksaan kunci untuk keamanan lebih lanjut
             switch($od["perintah"]) {
-                case 'sisip':
+                case 'sisipMHS':
                     include_once('mhs\sisip.php');
                     break;
-                case 'ubah':
+                case 'ubahMHS':
                     include_once('mhs\ubah.php');
                     break;
-                case 'hapus';
+                case 'hapusMHS';
                     include_once('mhs\hapus.php');
                     break;
-                case 'tampil':
+                case 'tampilMHS':
                     include_once('mhs\tampil.php');
+                    break;
+                case 'sisipDOSEN':
+                    include_once('dosen\sisip.php');
+                    break;
+                case 'ubahDOSEN':
+                    include_once('dosen\ubah.php');
+                    break;
+                case 'hapusDOSEN';
+                    include_once('dosen\hapus.php');
+                    break;
+                case 'tampilDOSEN':
+                    include_once('dosen\tampil.php');
                     break;
                 default:
                     echo "'status':'ERROR',";
