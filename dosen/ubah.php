@@ -12,7 +12,7 @@
         $keluar = $od["keluar"];
         $parameter = "'" . $oldid_dosen . "', '". $id_dosen . "', '" . $nama . "', '" . $tempat_lahir . "', '" . $tanggal_lahir . "', '" . $jenis_kelamin . "', '" . $masuk . "', '" . $keluar . "'";
     }
-    $sql = "call updateDOSEN(" . $parameter . ");";
+    $sql = "call ubahDOSEN(" . $parameter . ");";
     
     include_once("conn.php");
     

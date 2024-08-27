@@ -11,7 +11,7 @@
         $keluar = $od["keluar"];
         $parameter = "'" . $nim . "', '" . $nama . "', '" . $tempat_lahir . "', '" . $tanggal_lahir . "', '" . $jenis_kelamin . "', '" . $masuk . "', '" . $keluar . "'";
     }
-    $sql = "call insertMHS(" . $parameter . ");";
+    $sql = "call sisipMHS(" . $parameter . ");";
     
     include_once("conn.php");
     

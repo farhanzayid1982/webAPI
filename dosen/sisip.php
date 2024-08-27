@@ -11,7 +11,7 @@
         $keluar = $od["keluar"];
         $parameter = "'" . $id_dosen . "', '" . $nama . "', '" . $tempat_lahir . "', '" . $tanggal_lahir . "', '" . $jenis_kelamin . "', '" . $masuk . "', '" . $keluar . "'";
     }
-    $sql = "call insertDOSEN(" . $parameter . ");";
+    $sql = "call sisipDOSEN(" . $parameter . ");";
     
     include_once("conn.php");
     

@@ -12,7 +12,7 @@
         $keluar = $od["keluar"];
         $parameter = "'" . $oldnim . "', '". $nim . "', '" . $nama . "', '" . $tempat_lahir . "', '" . $tanggal_lahir . "', '" . $jenis_kelamin . "', '" . $masuk . "', '" . $keluar . "'";
     }
-    $sql = "call updateMHS(" . $parameter . ");";
+    $sql = "call ubahMHS(" . $parameter . ");";
     
     include_once("conn.php");
     
