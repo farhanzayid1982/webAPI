@@ -1,0 +1,320 @@
+{
+    "version": 6,
+    "entities": [
+      {
+        "entity": {
+          "type": "Project",
+          "id": "d5a7c364-8198-4fda-817b-487fc1b96851",
+          "name": "Programing Language"
+        },
+        "children": [
+          {
+            "entity": {
+              "type": "Service",
+              "id": "29fe2591-6e54-42d7-be8e-fb898fa8f7e3",
+              "name": "DOSEN"
+            },
+            "children": [
+              {
+                "entity": {
+                  "type": "Request",
+                  "method": {
+                    "requestBody": true,
+                    "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+                    "name": "POST"
+                  },
+                  "body": {
+                    "formBody": {
+                      "overrideContentType": true,
+                      "encoding": "application/x-www-form-urlencoded",
+                      "items": []
+                    },
+                    "bodyType": "Text",
+                    "textBody": "{\n    \"data\":{\n      \"perintah\":\"hapusDOSEN\",\n      \"id_dosen\":\"DSN99\"\n    },\n    \"kunci\":\"12345\"\n}\n"
+                  },
+                  "uri": {
+                    "scheme": {
+                      "name": "http",
+                      "version": "V11"
+                    },
+                    "host": "localhost:8080",
+                    "path": "/"
+                  },
+                  "id": "781bdb6b-69bf-45cc-8001-1027f8dcdcfe",
+                  "name": "hapusDOSEN",
+                  "headers": [
+                    {
+                      "enabled": true,
+                      "name": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ]
+                }
+              },
+              {
+                "entity": {
+                  "type": "Request",
+                  "method": {
+                    "requestBody": true,
+                    "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+                    "name": "POST"
+                  },
+                  "body": {
+                    "formBody": {
+                      "overrideContentType": true,
+                      "encoding": "application/x-www-form-urlencoded",
+                      "items": []
+                    },
+                    "bodyType": "Text",
+                    "textBody": "{\n    \"data\":{\n      \"perintah\":\"sisipDOSEN\",\n      \"id_dosen\":\"DSN99\",\n      \"nama\":\"test\",\n      \"tempat_lahir\":\"test\",\n      \"tanggal_lahir\":\"2024/08/24\",\n      \"jenis_kelamin\":\"L\",\n      \"masuk\":\"2024/08/24\",\n      \"keluar\":\"\"\n    },\n    \"kunci\":\"12345\"\n}\n"
+                  },
+                  "uri": {
+                    "scheme": {
+                      "name": "http",
+                      "version": "V11"
+                    },
+                    "host": "localhost:8080",
+                    "path": "/"
+                  },
+                  "id": "101ad7b5-f0d6-4aaa-aa58-a6d658f8cf5d",
+                  "name": "sisipDOSEN",
+                  "headers": [
+                    {
+                      "enabled": true,
+                      "name": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ]
+                }
+              },
+              {
+                "entity": {
+                  "type": "Request",
+                  "method": {
+                    "requestBody": true,
+                    "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+                    "name": "POST"
+                  },
+                  "body": {
+                    "formBody": {
+                      "overrideContentType": true,
+                      "encoding": "application/x-www-form-urlencoded",
+                      "items": []
+                    },
+                    "bodyType": "Text",
+                    "textBody": "{\n    \"data\":{\n        \"perintah\":\"tampilDOSEN\",\n        \"filter\":\"\"\n    },\n    \"kunci\":\"12345\"\n}\n"
+                  },
+                  "uri": {
+                    "scheme": {
+                      "name": "http",
+                      "version": "V11"
+                    },
+                    "host": "localhost:8080",
+                    "path": "/"
+                  },
+                  "id": "9a78f9b1-77ba-4526-82af-1490531e6e9a",
+                  "name": "tampilDOSEN",
+                  "headers": [
+                    {
+                      "enabled": true,
+                      "name": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ]
+                }
+              },
+              {
+                "entity": {
+                  "type": "Request",
+                  "method": {
+                    "requestBody": true,
+                    "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+                    "name": "POST"
+                  },
+                  "body": {
+                    "formBody": {
+                      "overrideContentType": true,
+                      "encoding": "application/x-www-form-urlencoded",
+                      "items": []
+                    },
+                    "bodyType": "Text",
+                    "textBody": "{\n    \"data\":{\n      \"perintah\":\"ubahDOSEN\",\n      \"oldnim\":\"DSN99\",\n      \"nim\":\"DSN99\",\n      \"nama\":\"test ubah 01\",\n      \"tempat_lahir\":\"test\",\n      \"tanggal_lahir\":\"2024/08/24\",\n      \"jenis_kelamin\":\"L\",\n      \"masuk\":\"2024/08/24\",\n      \"keluar\":\"\"\n    },\n    \"kunci\":\"12345\"\n}\n"
+                  },
+                  "uri": {
+                    "scheme": {
+                      "name": "http",
+                      "version": "V11"
+                    },
+                    "host": "localhost:8080",
+                    "path": "/"
+                  },
+                  "id": "04ef96c9-e663-4238-8273-966c3c52adfc",
+                  "name": "ubahDOSEN",
+                  "headers": [
+                    {
+                      "enabled": true,
+                      "name": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "entity": {
+              "type": "Service",
+              "id": "0b3af74f-0e18-4e9f-ab73-890246a88771",
+              "name": "MHS"
+            },
+            "children": [
+              {
+                "entity": {
+                  "type": "Request",
+                  "method": {
+                    "requestBody": true,
+                    "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+                    "name": "POST"
+                  },
+                  "body": {
+                    "formBody": {
+                      "overrideContentType": true,
+                      "encoding": "application/x-www-form-urlencoded",
+                      "items": []
+                    },
+                    "bodyType": "Text",
+                    "textBody": "{\n    \"data\":{\n      \"perintah\":\"hapusMHS\",\n      \"nim\":\"MH99\"\n    },\n    \"kunci\":\"12345\"\n}\n"
+                  },
+                  "uri": {
+                    "scheme": {
+                      "name": "http",
+                      "version": "V11"
+                    },
+                    "host": "localhost:8080",
+                    "path": "/"
+                  },
+                  "id": "b34fc7bf-ac9a-4018-884b-a760a22ed0dc",
+                  "name": "hapusMHS",
+                  "headers": [
+                    {
+                      "enabled": true,
+                      "name": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ]
+                }
+              },
+              {
+                "entity": {
+                  "type": "Request",
+                  "method": {
+                    "requestBody": true,
+                    "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+                    "name": "POST"
+                  },
+                  "body": {
+                    "formBody": {
+                      "overrideContentType": true,
+                      "encoding": "application/x-www-form-urlencoded",
+                      "items": []
+                    },
+                    "bodyType": "Text",
+                    "textBody": "{\n    \"data\":{\n      \"perintah\":\"sisipMHS\",\n      \"nim\":\"MH99\",\n      \"nama\":\"test\",\n      \"tempat_lahir\":\"test\",\n      \"tanggal_lahir\":\"2024/08/24\",\n      \"jenis_kelamin\":\"L\",\n      \"masuk\":\"2024/08/24\",\n      \"keluar\":\"\"\n    },\n    \"kunci\":\"12345\"\n}\n"
+                  },
+                  "uri": {
+                    "scheme": {
+                      "name": "http",
+                      "version": "V11"
+                    },
+                    "host": "localhost:8080",
+                    "path": "/"
+                  },
+                  "id": "efb6f6a6-557c-41f2-af1b-d7d711d054c3",
+                  "name": "sisipMHS",
+                  "headers": [
+                    {
+                      "enabled": true,
+                      "name": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ]
+                }
+              },
+              {
+                "entity": {
+                  "type": "Request",
+                  "method": {
+                    "requestBody": true,
+                    "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+                    "name": "POST"
+                  },
+                  "body": {
+                    "formBody": {
+                      "overrideContentType": true,
+                      "encoding": "application/x-www-form-urlencoded",
+                      "items": []
+                    },
+                    "bodyType": "Text",
+                    "textBody": "{\n    \"data\":{\n        \"perintah\":\"tampilMHS\",\n        \"filter\":\"\"\n    },\n    \"kunci\":\"12345\"\n}\n"
+                  },
+                  "uri": {
+                    "scheme": {
+                      "name": "http",
+                      "version": "V11"
+                    },
+                    "host": "localhost:8080",
+                    "path": "/"
+                  },
+                  "id": "f8bcd27b-a41b-4ca6-bcec-fc66ee759b8a",
+                  "name": "tampilMHS",
+                  "headers": [
+                    {
+                      "enabled": true,
+                      "name": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ]
+                }
+              },
+              {
+                "entity": {
+                  "type": "Request",
+                  "method": {
+                    "requestBody": true,
+                    "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+                    "name": "POST"
+                  },
+                  "body": {
+                    "formBody": {
+                      "overrideContentType": true,
+                      "encoding": "application/x-www-form-urlencoded",
+                      "items": []
+                    },
+                    "bodyType": "Text",
+                    "textBody": "{\n    \"data\":{\n      \"perintah\":\"ubahMHS\",\n      \"oldnim\":\"MH99\",\n      \"nim\":\"MH77\",\n      \"nama\":\"test ubah 01\",\n      \"tempat_lahir\":\"test\",\n      \"tanggal_lahir\":\"2024/08/24\",\n      \"jenis_kelamin\":\"L\",\n      \"masuk\":\"2024/08/24\",\n      \"keluar\":\"\"\n    },\n    \"kunci\":\"12345\"\n}\n"
+                  },
+                  "uri": {
+                    "scheme": {
+                      "name": "http",
+                      "version": "V11"
+                    },
+                    "host": "localhost:8080",
+                    "path": "/"
+                  },
+                  "id": "71251879-4fa3-42c9-86ff-894721ebf057",
+                  "name": "ubahMHS",
+                  "headers": [
+                    {
+                      "enabled": true,
+                      "name": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
