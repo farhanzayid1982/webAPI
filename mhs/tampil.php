@@ -7,7 +7,7 @@
     }
     $sql = "call tampilMHS(" . $filter . ");";
     include_once("conn.php");
-    
+    echo $sql;
     $result = $conn->query($sql);
     if($result->num_rows >0) {
         echo '"data":[';
