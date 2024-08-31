@@ -1,13 +1,13 @@
 <?php
     echo '"proses":"TAMPIL MAHASISWA",';
-    $filter = "''";
+    $filter = "";
     if(isset($od["filter"]) and $od["filter"]!="") {
         $key = $od["filter"];
-        $filter = " WHERE nama like '%$key%'";
+        $filter = $key;
     }
-    $sql = "call tampilMHS(" . $filter . ");";
+    $sql = "call tampilMHS('" . $filter . "');";
     include_once("conn.php");
-    echo $sql;
+    
     $result = $conn->query($sql);
     if($result->num_rows >0) {
         echo '"data":[';
