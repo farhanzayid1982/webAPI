@@ -3,7 +3,7 @@
     $filter = "";
     if(isset($od["filter"]) and $od["filter"]!="") {
         $key = $od["filter"];
-        $filter = " WHERE nama like '%$key%'";
+        $filter = $key;
     }
     $sql = "call tampilDOSEN('" . $filter . "');";
     include_once("conn.php");
