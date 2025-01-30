@@ -1,10 +1,12 @@
 <?php
     echo "'proses':'TAMPIL DOSEN',";
+    /*
     $filter = "";
     if(isset($od["filter"]) and $od["filter"]!="") {
         $key = $od["filter"];
         $filter = $key;
     }
+    */
     $sql = "call tampilDOSEN('" . $filter . "');";
     include_once("conn.php");
     

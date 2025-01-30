@@ -1,13 +1,17 @@
 <?php    
     echo "'proses':'HAPUS DOSEN',";
+    /*
     $parameter = "";
     if(isset($od["id_dosen"]) and $od["id_dosen"]!="") {
         $nim = $od["id_dosen"];
         
         $parameter = "'" . $id_dosen . "'";
     }
+        
     $sql = "call hapusDOSEN(" . $parameter . ");";
-    
+    */
+
+    $sql = "call hapusDOSEN('" . $pid . "');";
     include_once("conn.php");
     
     

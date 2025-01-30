@@ -4,19 +4,35 @@
     { 
         case 'GET':
             echo "Request Methode GET";
-            //include_once('dosen\tampil.php');
+            if(isset($_GET['pfilter'])) {
+                $filter=$_GET['pfilter'];
+            } else {
+                $filter="";
+            }
+            include_once('dosen\tampil.php');
             break;
         case 'POST':
             echo "Request Methode POST";
-            //include_once('dosen\sisip.php');
+            $json_params = file_get_contents("php://input");
+            $data = json_decode(file_get_contents('php://input'), true);
+            $od = $data["data"]; //Object Data
+            include_once('dosen\sisip.php');
             break;
         case 'PUT':
             echo "Request Methode PUT";
-            //include_once('dosen\ubah.php');
+            $json_params = file_get_contents("php://input");
+            $data = json_decode(file_get_contents('php://input'), true);
+            $od = $data["data"]; //Object Data
+            include_once('dosen\ubah.php');
             break;
         case 'DELETE':
             echo "Request Methode DELETE";
-            //include_once('dosen\hapus.php');
+            if(isset($_GET['pid'])) {
+                $pid=$_GET['pid'];
+            } else {
+                $pid="";
+            }
+            include_once('dosen\hapus.php');
             break;
         default:
             echo "'status':'ERROR',";
