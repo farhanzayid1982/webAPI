@@ -1,9 +1,9 @@
 <?php
     //credential di bawah di buat hardcode (Seharusnya menggunakan database)
-    $api_credentials = array(
+    /*$api_credentials = array(
         'userAPI' => 'passAPI',
         'user2' => 'userLain'
-    );
+    );*/
 
     if (!isset($_SERVER['PHP_AUTH_USER'])) {
         header('WWW-Authenticate: Basic realm="EAI API"');
