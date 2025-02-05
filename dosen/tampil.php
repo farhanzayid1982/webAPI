@@ -8,7 +8,7 @@
     }
     */
     $sql = "call tampilDOSEN('" . $filter . "');";
-    include_once("conn.php");
+    include("conn.php");
     
     $result = $conn->query($sql);
     if($result->num_rows >0) {

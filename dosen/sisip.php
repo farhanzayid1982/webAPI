@@ -13,7 +13,7 @@
     }
     $sql = "call sisipDOSEN(" . $parameter . ");";
     
-    include_once("conn.php");
+    include("conn.php");
     
     
     //Metode 1

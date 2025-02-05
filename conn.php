@@ -1,11 +1,11 @@
 <?php
     $servername = "localhost";
-    $username = "pl";
-    $password = "pl";
+    $usernamedb = "pl";
+    $passworddb = "pl";
     $databasename = "dblokal";
     
     // Create connection
-    $conn = new mysqli($servername, $username, $password, $databasename);
+    $conn = new mysqli($servername, $usernamedb, $passworddb, $databasename);
     
     // Check connection
     if (mysqli_connect_error()) {

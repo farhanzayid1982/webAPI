@@ -12,7 +12,7 @@
     */
 
     $sql = "call hapusDOSEN('" . $pid . "');";
-    include_once("conn.php");
+    include("conn.php");
     
     
     //Metode 1
