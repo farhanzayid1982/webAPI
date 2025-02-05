@@ -13,7 +13,9 @@
         $username = $_SERVER['PHP_AUTH_USER'];
         $password = $_SERVER['PHP_AUTH_PW'];
         include('ceklogin.php');
-        echo $username;
+
+        //Blok pemeriksaan digantikan dengan include ceklogin
+        /*
         if (!array_key_exists($username, $api_credentials)) {
             header('HTTP/1.1 403 Forbidden');
             exit;
@@ -22,6 +24,7 @@
             header('HTTP/1.1 403 Forbidden');
             exit;
         }
+            */
     }
 
 
