@@ -39,14 +39,38 @@
             } else {
                 $filter="";
             }
-            include_once('dosen\tampil.php');
+
+            if(isset($_GET['pDATA'])) {
+                $pilihan=$_GET['pDATA'];
+            } else {
+                $pilihan="";
+            }
+ 
+            switch($pilihan) {
+                case 'DOSEN':
+                    include_once('dosen\tampil.php');
+                    break;
+                case 'MHS':
+                    include_once('mhs\tampil.php');
+                    break;
+                default:
+                //echo "'data':[]"; //Untuk respon jika data yang di request tidak terdaftar
+            }
             break;
+            
         case 'POST':
             echo "Request Methode POST";
             $json_params = file_get_contents("php://input");
             $data = json_decode(file_get_contents('php://input'), true);
             $od = $data["data"]; //Object Data
-            include_once('dosen\sisip.php');
+            switch($od['perintah']) {
+                case 'sisipDOSEN':
+                    include_once('dosen\sisip.php');
+                    break;
+                case 'sisipMHS':
+                    include_once('dosen\sisip.php');
+                    break;
+            }
             break;
         case 'PUT':
             echo "Request Methode PUT";

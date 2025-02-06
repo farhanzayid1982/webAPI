@@ -7,10 +7,10 @@
     $result = $conn->query($sql);
     if($result->num_rows >0) {
         //echo "'data':[";
-        $counter = 0;
+        //$counter = 0;
         // Output data dari setiap baris
         while($row = $result->fetch_assoc()) {
-            $counter++;
+            //$counter++;
             $id_person = $row["id_person"];
             //if($counter>1) {echo ",";};
             //echo "{'username': '" . $row["username"]. "', 'id_person': '" . $row["id_person"]. "'}";
