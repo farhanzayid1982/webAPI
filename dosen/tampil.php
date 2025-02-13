@@ -18,7 +18,7 @@
         while($row = $result->fetch_assoc()) {
             $counter++;
             if($counter>1) {echo ",";};
-            echo "{'id_dosen': '" . $row["id_dosen"]. "', 'nama': '" . $row["nama"]. "', 'tanggal_lahir' : '" . $row["tempat_lahir"]. "', 'Tanggal_Lahir' : '" . $row["tanggal_lahir"]. "', 'jenis_kelamin : " . $row["jenis_kelamin"] . ", 'masuk' : '" . $row["masuk"] . "', 'keluar' : '" . $row["keluar"] . "'}";
+            echo "{'id_dosen': '" . $row["id_dosen"]. "', 'nama': '" . $row["nama"]. "', 'tempat_lahir' : '" . $row["tempat_lahir"]. "', 'Tanggal_Lahir' : '" . $row["tanggal_lahir"]. "', 'jenis_kelamin' : '" . $row["jenis_kelamin"] . "', 'masuk' : '" . $row["masuk"] . "', 'keluar' : '" . $row["keluar"] . "'}";
         }
         echo "],";
         echo "'status':'SUKSES',";
