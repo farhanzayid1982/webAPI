@@ -47,7 +47,7 @@
             }
  
             switch($pilihan) {
-                case 'DOSEN':
+                case 'DSN':
                     include_once('dosen\tampil.php');
                     break;
                 case 'MHS':
@@ -64,7 +64,7 @@
             $data = json_decode(file_get_contents('php://input'), true);
             $od = $data["data"]; //Object Data
             switch($od['perintah']) {
-                case 'sisipDOSEN':
+                case 'sisipDSN':
                     include_once('dosen\sisip.php');
                     break;
                 case 'sisipMHS':
@@ -77,7 +77,14 @@
             $json_params = file_get_contents("php://input");
             $data = json_decode(file_get_contents('php://input'), true);
             $od = $data["data"]; //Object Data
-            include_once('dosen\ubah.php');
+            switch($od['perintah']) {
+                case 'ubahDSN':
+                    include_once('dosen\ubah.php');
+                    break;
+                case 'ubahMHS':
+                    include_once('mhs\ubah.php');
+                    break;
+                }
             break;
         case 'DELETE':
             //echo "Request Methode DELETE";
@@ -86,7 +93,14 @@
             } else {
                 $pid="";
             }
-            include_once('dosen\hapus.php');
+            switch($_GET['pDATA']) {
+                case 'DSN':
+                    include_once('dosen\hapus.php');
+                    break;
+                case 'MHS':
+                    include_once('mhs\hapus.php');
+                    break;
+                }
             break;
         default:
             echo "'status':'ERROR',";
